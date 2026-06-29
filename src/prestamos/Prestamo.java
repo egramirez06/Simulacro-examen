@@ -3,6 +3,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package prestamos;
+import java.time.LocalTime;
+import libros.Libro;
+import estudiantes.Estudiante;
 
 /**
  *
@@ -10,41 +13,55 @@ package prestamos;
  */
 public class Prestamo {
     
-    private int codigo;
-    private String titulo;
-    private String autor;
-    private double precio;
-    
-    public int getCodigo(){
-        return this.codigo;
+    private int numeroPrestamo;
+    private LocalTime fecha;
+    private Libro libro;
+    private Estudiante estudiante;
+
+    public int getNumeroPrestamo() {
+        return numeroPrestamo;
     }
 
-    public String getTitulo() {
-        return titulo;
+    public LocalTime getFecha() {
+        return fecha;
     }
 
-    public String getAutor() {
-        return autor;
+    public Libro getLibro() {
+        return libro;
     }
 
-    public double getPrecio() {
-        return precio;
+    public Estudiante getEstudiante() {
+        return estudiante;
     }
 
-    public void setPrecio(double precio) {
-        this.precio = precio;
+    public void setNumeroPrestamo(int numeroPrestamo) {
+        this.numeroPrestamo = numeroPrestamo;
     }
 
-    public Prestamo(int codigo, String titulo, String autor, double precio) {
-        this.codigo = codigo;
-        this.titulo = titulo;
-        this.autor = autor;
-        this.precio = precio;
+    public void setFecha(LocalTime fecha) {
+        this.fecha = fecha;
     }
+
+    public void setLibro(Libro libro) {
+        this.libro = libro;
+    }
+    public Prestamo(int numeroPrestamo, LocalTime fecha, Libro libro, Estudiante estudiante) {
+        this.numeroPrestamo = numeroPrestamo;
+        this.fecha = fecha;
+        this.libro = libro;
+        this.estudiante = estudiante;
+    }
+
     @Override
     public String toString() {
-        return "Prestamo{" + "codigo=" + codigo + ", titulo=" + titulo + ", autor=" + autor + ", precio=" + precio + '}';
+        return "Prestamo{" + "numeroPrestamo=" + numeroPrestamo + ", fecha=" + fecha + ", libro=" + libro + ", estudiante=" + estudiante + '}';
     }
+    
+    
+    
+    
+    
+   
     
     
 }
